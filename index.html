@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./img/favico.ico">
+    <title>Exercise - AJAX</title>
+</head>
+<body>
+    <div class="container">
+        <h1>GitHub API</h1>
+        <p>Enter a user name to get information from the user's github profile.</p>
+        <div class="form-row">
+            <div class="col-md-6">
+                <input type="text" name="search" id="search" class="form-control">
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-primary" id="btn_buscar">Search</button>
+            </div>
+        </div>        
+
+        <span id="info">Please wait...</span>
+        <h5 class="mt-4 text-danger" id="msgErro">Oopss... there was an error with the request. Status Message:</h5>
+        <h5 class="mt-4" id="label">Wanted profile information:</h5>       
+
+        <div class="row mt-4" id="profile-info">
+            <div class="col-md-3">
+                <img src="./img/avatar.jpg" alt="GitHub Avatar" id="img_avatar" class="img-fluid img-thumbnail">
+            </div>
+            <div class="col-md-9">
+                <div><label for="name"><b>Name:&nbsp</b></label><span id="name"></span></div>
+                <div><label for="login"><b>Login:&nbsp</b></label><span id="login"></span></div>
+                <div><label for="url"><b>Profile Url:&nbsp</b></label><a id="url" href="#" target="_blank"></a></div>
+                <div><label for="location"><b>Location:&nbsp</b></label><span id="location"> Location</span></div>
+                <div><label for="public-repos"><b>Public repositories:&nbsp</b></label><span id="public_repos"> Num. Repositórios</span></div>
+                <div><label for="created-at"><b>Created in:&nbsp</b></label><span id="created_at"> dd/mm/aaaa</span></div>
+                <div><label for="updated-at"><b>Updated in:&nbsp</b></label><span id="updated_at"> dd/mm/aaaa</span></div>
+            </div>            
+        </div>
+    </div>
+<!-- Inclusion of jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.0.min.js" ></script>
+
+<!-- Inclusion of Bootstrap JS -->	
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+<!-- File that should contain the requested functionalities -->	
+<script src="./js/conf.js"></script>    
+</body>
+</html>
+
